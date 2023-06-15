@@ -2,7 +2,7 @@ name: Scrape traffic (slim)
 
 on:
   schedule:
-    - cron: '*/2 * * * *'
+    - cron: '13 */4 * * *'
   workflow_dispatch:
 
 jobs:
