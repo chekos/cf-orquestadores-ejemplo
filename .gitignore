@@ -119,6 +119,9 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
+# Scraper outputs are workflow artifacts, not Git-tracked data.
+data/*.json
+
 # Environments
 .env
 .venv
