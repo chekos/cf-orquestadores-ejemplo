@@ -23,7 +23,7 @@ jobs:
         # Golden Gate Bridge to Oakland
         curl --fail --silent --show-error "https://maps.googleapis.com/maps/api/directions/json?origin=place_id:ChIJw____96GhYARCVVwg5cT7c0&destination=place_id:ChIJQabAAlSEj4ARYHQBAw8MY7A&departure_time=now&key=$GOOGLE_MAPS_API_KEY" | jq '{id: "goldengate-oakland", duration_in_traffic: .routes[0].legs[0].duration_in_traffic.value}' > ./data/goldengate-to-oakland-slim_${now}.json
         sleep 3
-    - uses: actions/upload-artifact@v4
+    - uses: actions/upload-artifact@v7.0.1
       with:
         name: traffic-sample
         path: data/*.json
